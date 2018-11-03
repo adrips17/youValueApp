@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}YOU VALUE{% endblock %}</title>
+  {% block stylesheets %}{% endblock %}
+  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wrap">
+          {% block titulo %}
+          <p class="form-title">
+            YOU VALUE </p>
+          {% endblock %}
+          {% block form %}
+
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% block javascripts %}{% endblock %}
+  <footer>
+    {% block footer %}<div class="posted-by">By: Adrián Poveda </a></div>{% endblock %}
+  </footer>
+</body>
+
+</html>

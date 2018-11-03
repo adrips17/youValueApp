@@ -1,0 +1,18 @@
+{% extends 'baseProyecto.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
+
+{% endblock %}
+
+{% block titulo %}
+<p class="form-title"> NUEVO LUGAR </p>
+{% endblock %}
+{% block form %}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+<br><br>
+{% endblock %}
+{% block footer %}<div class="posted-by" style="bottom: -100px">By: Adrián Poveda </a></div>{% endblock %}

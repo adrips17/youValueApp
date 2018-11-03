@@ -1,0 +1,47 @@
+{% extends 'baseProyecto.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
+
+{% endblock %}
+
+{% block titulo %}
+<p class="form-title"> USUARIOS </p>
+{% endblock %}
+{% block form %}
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <!--
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      -->
+      <th scope="col">Nombre de usuario</th>
+      <!--
+      <th scope="col">Sexo</th>
+      <th scope="col">Fecha nacimiento</th>
+      -->
+    </thead>
+  <tbody>
+  </tr>
+
+  {% for usuario in usuarios %}
+              <tr>
+                <!--
+                  <td>{{ usuario.nombreUser }}</td>
+                  <td>{{ usuario.apellidosUser }}</td>
+                -->
+                  <td>{{ usuario.nombreUsuario }}</td>
+                <!--
+                  <td>{{ usuario.sexoUser }}</td>
+                  <td>{{ usuario.fechaNacimientoUser|date('Y-m-d') }}</td>
+                -->
+
+              </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
+{% block footer %}<div class="posted-by" style="bottom: -100px">By: Adrián Poveda </a></div>{% endblock %}

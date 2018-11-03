@@ -1,0 +1,21 @@
+{% extends 'baseProyecto.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
+
+{% endblock %}
+
+{% block titulo %}
+<p class="form-title"> INFORMACIÓN DEL LUGAR: {{ nombreLugar}} </p>
+{% endblock %}
+{% block form %}
+<li> Id: {{ id }}</li>
+<li> Nombre: {{ nombreLugar }}</li>
+<li> Descripcion: {{ descripcionLugar }}</li>
+<li> Ubicacion: {{ ubicacionLugar }}</li>
+<li> Categoria: {{ categoriaLugar }}</li>
+<li> Nota media {{ notaMediaLugar }}</li>
+
+<br><br>
+{% endblock %}

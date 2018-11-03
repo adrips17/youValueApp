@@ -1,0 +1,21 @@
+{% extends 'baseProyecto.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/estilos.css')}}">
+
+{% endblock %}
+
+{% block titulo %}
+<p class="form-title"> INFORMACIÓN DEL USUARIO: {{ nombreUsuario}} </p>
+{% endblock %}
+{% block form %}
+<li> Id: {{ id }}</li>
+<li> Usuario: {{ nombreUsuario }}</li>
+<li> Nombre del usuario: {{ nombreUser }}</li>
+<li> Apellidos del usuario: {{ apellidosUser }}</li>
+<li> Sexo del usuario: {{ sexoUser }}</li>
+<li> Fecha de nacimiento del usuario: {{ fechaNacimientoUser|date('Y-m-d') }}</li>
+
+<br><br>
+{% endblock %}
